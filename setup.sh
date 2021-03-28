@@ -7,7 +7,7 @@ else
 echo "> Starting setup script..."
 fi
 
-setup raspberry pi
+# setup raspberry pi
 echo "> Updating Raspberry Pi"
 sudo apt-get update && apt-get upgrade
 
@@ -24,12 +24,6 @@ sudo apt-get install git -y
 echo "> Installing pm2"
 npm install -g pm2
 
-echo "> Installing MongoDB Community Edition"
-sudo apt install mongodb -y
-sudo systemctl enable mongodb
-# sudo systemctl start mongodb
-mongo --eval "printjson(db.getSiblingDB('dallas-iozt'))"
-
 # setup download directory
 echo "> Setting up download directory"
 cd ~/Desktop
@@ -39,12 +33,17 @@ cd code
 # setting up projects
 echo "> Cloning projects"
 git clone https://github.com/Internet-of-Zoo-Things/dallas-iozt-app.git
+git clone https://github.com/Internet-of-Zoo-Things/dallas-iozt-connectivity-server.git
 
 echo "> Setting up dallas-iozt-app"
 cd dallas-iozt-app
 npm install
 cp .env.example .env
 npm run build
+
+echo "> Setting up dallas-iozt-connectivity-server"
+cd ../dallas-iozt-connectivity-server
+pip install -r requirements.txt
 
 #daemonize app by adding this command here -  pm2 start <appName>.js
 
