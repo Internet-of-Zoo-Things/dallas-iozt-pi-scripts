@@ -22,7 +22,7 @@ sudo apt-get install vim -y
 sudo apt-get install git -y
 
 echo "> Installing pm2"
-npm install -g pm2
+npm install -g pm2@4
 
 # setup download directory
 echo "> Setting up download directory"
@@ -45,10 +45,14 @@ echo "> Setting up dallas-iozt-connectivity-server"
 cd ../dallas-iozt-connectivity-server
 pip install -r requirements.txt
 
-#daemonize app by adding this command here -  pm2 start <appName>.js
+# additional setup
+cd ~/Desktop
+mkdir logs
 
-# generating script that will launch pm2 on boot
-# pm2 startup systemd
-# pm2 save
+# run on boot
+echo >> /home/pi/.bashrc
+echo >> /home/pi/.bashrc
+echo "# iozt startup" >> /home/pi/.bashrc
+echo "sh ~/Desktop/dallas-iozt-pi-scripts/run.sh" >> /home/pi/.bashrc
 
-
+echo "> Pi setup complete; please restart for changes to take effect"
