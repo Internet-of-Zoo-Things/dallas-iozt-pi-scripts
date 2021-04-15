@@ -55,4 +55,5 @@ echo >> /home/pi/.bashrc
 echo "# iozt startup" >> /home/pi/.bashrc
 echo "sh ~/Desktop/dallas-iozt-pi-scripts/run.sh" >> /home/pi/.bashrc
 
-echo "> Pi setup complete; please restart for changes to take effect"
+echo "> Pi setup complete; rebooting..."
+sudo reboot
