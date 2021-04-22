@@ -23,4 +23,4 @@ sudo apt-get install vim -y
 echo "> Installing pm2"
 npm install -g pm2@4
 
-echo "> Setup part 1 completed. Please run `sh setup2.sh` (not as root)."
+echo "> Setup part 1 completed. Please run <sh setup2.sh> (not as root)."
