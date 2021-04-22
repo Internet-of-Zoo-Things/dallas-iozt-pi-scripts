@@ -3,7 +3,13 @@ Shell scripts used by the Raspberry Pis
 
 # Install script
 
-This script should be ran once when setting up the Pi to download the required programs and packages.
+This script should be ran once as root when setting up the Pi to download the required programs and packages. This looks like:
+
+```
+git clone https://github.com/Internet-of-Zoo-Things/dallas-iozt-pi-scripts.git
+cd dallas-iozt-pi-scripts
+sudo setup.sh
+```
 
 # Boot script
 
