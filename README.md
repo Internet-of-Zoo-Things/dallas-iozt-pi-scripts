@@ -8,9 +8,9 @@ This script should be ran once as root when setting up the Pi to download the re
 ```
 git clone https://github.com/Internet-of-Zoo-Things/dallas-iozt-pi-scripts.git
 cd dallas-iozt-pi-scripts
-sudo setup.sh
+sudo sh setup.sh
 ...
-sudo setup2.sh
+sh setup2.sh
 ```
 
 # Boot script
