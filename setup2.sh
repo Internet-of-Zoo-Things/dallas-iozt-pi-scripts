@@ -27,7 +27,7 @@ mkdir logs
 echo >> /home/pi/.bashrc
 echo >> /home/pi/.bashrc
 echo "# iozt startup" >> /home/pi/.bashrc
-echo "sh ~/Desktop/dallas-iozt-pi-scripts/run.sh" >> /home/pi/.bashrc
+echo "sh ~/dallas-iozt-pi-scripts/run.sh" >> /home/pi/.bashrc
 
 echo "> Pi setup complete"
 read -p "Reboot? (y/n): " reboot
